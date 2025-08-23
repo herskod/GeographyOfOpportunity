@@ -23,16 +23,16 @@
       font-size: 2rem;
     }
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
     .chart-block {
-      margin-bottom: 3rem;
       background: #fff;
       padding: 1rem;
       border-radius: 10px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
     }
     .caption {
       margin-top: 1rem;
@@ -42,6 +42,14 @@
     iframe {
       width: 100%;
       border: none;
+    }
+
+    /* Side-by-side charts */
+    .chart-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
 
     /* Tabs */
@@ -86,48 +94,48 @@
     <div id="education" class="tab-content active">
       <h2 class="section-title">Correlation between family income and student performance by county</h2>
 
-      <!-- Chart 1 -->
-      <div class="chart-block">
-        <iframe title="Reading" src="https://datawrapper.dwcdn.net/tln6l/1/" height="480"></iframe>
-      </div>
-
-      <!-- Chart 2 -->
-      <div class="chart-block">
-        <iframe title="Maths" src="https://datawrapper.dwcdn.net/3ABhi/1/" height="480"></iframe>
+      <!-- Chart 1 & 2 side by side -->
+      <div class="chart-row">
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-tln6l" src="https://datawrapper.dwcdn.net/tln6l/1/" scrolling="no" height="480" data-external="1"></iframe>
+        </div>
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-3ABhi" src="https://datawrapper.dwcdn.net/3ABhi/1/" scrolling="no" height="480" data-external="1"></iframe>
+        </div>
       </div>
 
       <h2 class="section-title">Impact of Regions on student performance: variation in timing</h2>
 
-      <!-- Chart 3 -->
-      <div class="chart-block">
-        <iframe title="Maths, moving in" src="https://datawrapper.dwcdn.net/DKasK/1/" height="480"></iframe>
+      <!-- Chart 3 & 4 side by side -->
+      <div class="chart-row">
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-DKasK" src="https://datawrapper.dwcdn.net/DKasK/1/" scrolling="no" height="480" data-external="1"></iframe>
+        </div>
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-MAjol" src="https://datawrapper.dwcdn.net/MAjol/1/" scrolling="no" height="480" data-external="1"></iframe>
+        </div>
       </div>
 
-      <!-- Chart 4 -->
-      <div class="chart-block">
-        <iframe title="Reading, moving in" src="https://datawrapper.dwcdn.net/MAjol/1/" height="480"></iframe>
-      </div>
-
-      <!-- Chart 5 -->
-      <div class="chart-block">
-        <iframe title="Maths, moving out" src="https://datawrapper.dwcdn.net/z5Fy1/1/" height="480"></iframe>
-      </div>
-
-      <!-- Chart 6 -->
-      <div class="chart-block">
-        <iframe title="Reading, moving out" src="https://datawrapper.dwcdn.net/9alA0/1/" height="480"></iframe>
+      <!-- Chart 5 & 6 side by side -->
+      <div class="chart-row">
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-z5Fy1" src="https://datawrapper.dwcdn.net/z5Fy1/1/" scrolling="no" height="480" data-external="1"></iframe>
+        </div>
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-9alA0" src="https://datawrapper.dwcdn.net/9alA0/1/" scrolling="no" height="480" data-external="1"></iframe>
+        </div>
       </div>
 
       <h2 class="section-title">Impact of Regions on student performance: time spent in regions</h2>
 
-      <!-- Chart 7 -->
-      <div class="chart-block">
-        <iframe title="Maths scores" src="https://datawrapper.dwcdn.net/6oREf/1/" height="480"></iframe>
-      </div>
-
-      <!-- Chart 8 -->
-      <div class="chart-block">
-        <iframe title="Reading scores" src="https://datawrapper.dwcdn.net/Iu1Wv/1/" height="480"></iframe>
+      <!-- Chart 7 & 8 side by side -->
+      <div class="chart-row">
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-6oREf" src="https://datawrapper.dwcdn.net/6oREf/1/" scrolling="no" height="480" data-external="1"></iframe>
+        </div>
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-Iu1Wv" src="https://datawrapper.dwcdn.net/Iu1Wv/1/" scrolling="no" height="480" data-external="1"></iframe>
+        </div>
       </div>
     </div>
 
@@ -135,19 +143,34 @@
     <div id="earnings" class="tab-content">
       <h2 class="section-title">Earnings by Region</h2>
 
-      <!-- Chart 9 -->
-      <div class="chart-block">
-        <iframe title="Chart 9 Placeholder" src="" height="400"></iframe>
-        <div class="caption">Caption for chart 9</div>
-      </div>
-
-      <!-- Chart 10 -->
-      <div class="chart-block">
-        <iframe title="Chart 10 Placeholder" src="" height="400"></iframe>
-        <div class="caption">Caption for chart 10</div>
+      <!-- Chart 9 & 10 side by side -->
+      <div class="chart-row">
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-9" title="Chart 9 Placeholder" src="" height="400"></iframe>
+          <div class="caption">Caption for chart 9</div>
+        </div>
+        <div class="chart-block">
+          <iframe id="datawrapper-chart-10" title="Chart 10 Placeholder" src="" height="400"></iframe>
+          <div class="caption">Caption for chart 10</div>
+        </div>
       </div>
     </div>
   </main>
+
+  <!-- Datawrapper auto-resize script -->
+  <script type="text/javascript">
+    !function(){"use strict";window.addEventListener("message",function(a){
+      if(void 0!==a.data["datawrapper-height"]){
+        var e=document.querySelectorAll("iframe");
+        for(var t in a.data["datawrapper-height"])
+          for(var r,i=0;r=e[i];i++)
+            if(r.contentWindow===a.source){
+              var d=a.data["datawrapper-height"][t]+"px";
+              r.style.height=d
+            }
+      }
+    })}();
+  </script>
 
   <script>
     function openTab(tabId) {
