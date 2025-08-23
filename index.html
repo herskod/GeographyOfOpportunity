@@ -43,78 +43,123 @@
       width: 100%;
       border: none;
     }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #ddd;
+    }
+    .tab {
+      padding: 1rem 2rem;
+      cursor: pointer;
+      font-weight: bold;
+      border-bottom: 3px solid transparent;
+      transition: 0.3s;
+    }
+    .tab.active {
+      border-color: #0077cc;
+      color: #0077cc;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Geography of Opportunity in Hungary</h1>
   </header>
+
   <main class="container">
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <div class="tab active" onclick="openTab('education')">Education</div>
+      <div class="tab" onclick="openTab('earnings')">Earnings</div>
+    </div>
+
+    <!-- Education Tab -->
+    <div id="education" class="tab-content active">
       <h2 class="section-title">Correlation between family income and student performance by county</h2>
 
-    <!-- Chart 1 -->
-    <div class="chart-block">
-<iframe title="Reading" aria-label="Choropleth map" id="datawrapper-chart-tln6l" src="https://datawrapper.dwcdn.net/tln6l/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="480" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}})}();
-</script>
+      <!-- Chart 1 -->
+      <div class="chart-block">
+        <iframe title="Reading" src="https://datawrapper.dwcdn.net/tln6l/1/" height="480"></iframe>
+      </div>
+
+      <!-- Chart 2 -->
+      <div class="chart-block">
+        <iframe title="Maths" src="https://datawrapper.dwcdn.net/3ABhi/1/" height="480"></iframe>
+      </div>
+
+      <h2 class="section-title">Impact of Regions on student performance: variation in timing</h2>
+
+      <!-- Chart 3 -->
+      <div class="chart-block">
+        <iframe title="Maths, moving in" src="https://datawrapper.dwcdn.net/DKasK/1/" height="480"></iframe>
+      </div>
+
+      <!-- Chart 4 -->
+      <div class="chart-block">
+        <iframe title="Reading, moving in" src="https://datawrapper.dwcdn.net/MAjol/1/" height="480"></iframe>
+      </div>
+
+      <!-- Chart 5 -->
+      <div class="chart-block">
+        <iframe title="Maths, moving out" src="https://datawrapper.dwcdn.net/z5Fy1/1/" height="480"></iframe>
+      </div>
+
+      <!-- Chart 6 -->
+      <div class="chart-block">
+        <iframe title="Reading, moving out" src="https://datawrapper.dwcdn.net/9alA0/1/" height="480"></iframe>
+      </div>
+
+      <h2 class="section-title">Impact of Regions on student performance: time spent in regions</h2>
+
+      <!-- Chart 7 -->
+      <div class="chart-block">
+        <iframe title="Maths scores" src="https://datawrapper.dwcdn.net/6oREf/1/" height="480"></iframe>
+      </div>
+
+      <!-- Chart 8 -->
+      <div class="chart-block">
+        <iframe title="Reading scores" src="https://datawrapper.dwcdn.net/Iu1Wv/1/" height="480"></iframe>
+      </div>
     </div>
 
-    <!-- Chart 2 -->
-    <div class="chart-block">
-<iframe title="Maths" aria-label="Choropleth map" id="datawrapper-chart-3ABhi" src="https://datawrapper.dwcdn.net/3ABhi/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="480" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}})}();
-</script>      
+    <!-- Earnings Tab -->
+    <div id="earnings" class="tab-content">
+      <h2 class="section-title">Earnings by Region</h2>
+
+      <!-- Chart 9 -->
+      <div class="chart-block">
+        <iframe title="Chart 9 Placeholder" src="" height="400"></iframe>
+        <div class="caption">Caption for chart 9</div>
+      </div>
+
+      <!-- Chart 10 -->
+      <div class="chart-block">
+        <iframe title="Chart 10 Placeholder" src="" height="400"></iframe>
+        <div class="caption">Caption for chart 10</div>
+      </div>
     </div>
-      <h2 class="section-title">Impact of Regions on student performance: variation in moving out and moving in</h2>
-
-    <!-- Chart 3 -->
-    <div class="chart-block">
-<iframe title="Maths, moving in" aria-label="Choropleth map" id="datawrapper-chart-DKasK" src="https://datawrapper.dwcdn.net/DKasK/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="480" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}})}();
-</script>    
-    </div>
-
-    <!-- Chart 4 -->
-    <div class="chart-block">
-<iframe title="Reading, moving in" aria-label="Choropleth map" id="datawrapper-chart-MAjol" src="https://datawrapper.dwcdn.net/MAjol/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="480" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}})}();
-</script>
-    </div>
-
-    <!-- Chart 5 -->
-    <div class="chart-block">
-<iframe title="Maths, moving out" aria-label="Choropleth map" id="datawrapper-chart-z5Fy1" src="https://datawrapper.dwcdn.net/z5Fy1/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="480" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}})}();
-</script>     
-    </div>
-
-    <!-- Chart 6 -->
-    <div class="chart-block">
-     <iframe title="Reading, moving out" aria-label="Choropleth map" id="datawrapper-chart-9alA0" src="https://datawrapper.dwcdn.net/9alA0/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="480" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}})}();
-</script>
-    </div>
-
-    <!-- Chart 7 -->
-    <div class="chart-block">
-      <iframe title="Chart 7 Placeholder" src="" height="400"></iframe>
-      <div class="caption">Caption for chart 7</div>
-    </div>
-
-    <!-- Chart 8 -->
-    <div class="chart-block">
-      <iframe title="Chart 8 Placeholder" src="" height="400"></iframe>
-      <div class="caption">Caption for chart 8</div>
-    </div>
-
-    <!-- Chart 9 -->
-    <div class="chart-block">
-      <iframe title="Chart 9 Placeholder" src="" height="400"></iframe>
-      <div class="caption">Caption for chart 9</div>
-    </div>
-
-    <!-- Chart 10 -->
-    <div class="chart-block">
-      <iframe title="Chart 10 Placeholder" src="" height="400"></iframe>
-      <div class="caption">Caption for chart 10</div>
-    </div>
-
-    <!-- Easily add more chart-blocks below -->
-
   </main>
+
+  <script>
+    function openTab(tabId) {
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      // Remove active class from all tabs
+      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+      // Show the selected tab
+      document.getElementById(tabId).classList.add('active');
+      // Mark the clicked tab as active
+      event.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>
