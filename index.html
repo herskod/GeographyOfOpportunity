@@ -44,7 +44,7 @@
       border: none;
     }
 
-    /* Side-by-side charts */
+    /* Side-by-side layout for education */
     .chart-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -94,7 +94,7 @@
     <div id="education" class="tab-content active">
       <h2 class="section-title">Correlation between family income and student performance by county</h2>
 
-      <!-- Chart 1 & 2 side by side -->
+      <!-- Chart 1 & 2 -->
       <div class="chart-row">
         <div class="chart-block">
           <iframe id="datawrapper-chart-tln6l" src="https://datawrapper.dwcdn.net/tln6l/1/" scrolling="no" height="480" data-external="1"></iframe>
@@ -106,7 +106,7 @@
 
       <h2 class="section-title">Impact of Regions on student performance: variation in timing</h2>
 
-      <!-- Chart 3 & 4 side by side -->
+      <!-- Chart 3 & 4 -->
       <div class="chart-row">
         <div class="chart-block">
           <iframe id="datawrapper-chart-DKasK" src="https://datawrapper.dwcdn.net/DKasK/1/" scrolling="no" height="480" data-external="1"></iframe>
@@ -116,7 +116,7 @@
         </div>
       </div>
 
-      <!-- Chart 5 & 6 side by side -->
+      <!-- Chart 5 & 6 -->
       <div class="chart-row">
         <div class="chart-block">
           <iframe id="datawrapper-chart-z5Fy1" src="https://datawrapper.dwcdn.net/z5Fy1/1/" scrolling="no" height="480" data-external="1"></iframe>
@@ -128,7 +128,7 @@
 
       <h2 class="section-title">Impact of Regions on student performance: time spent in regions</h2>
 
-      <!-- Chart 7 & 8 side by side -->
+      <!-- Chart 7 & 8 -->
       <div class="chart-row">
         <div class="chart-block">
           <iframe id="datawrapper-chart-6oREf" src="https://datawrapper.dwcdn.net/6oREf/1/" scrolling="no" height="480" data-external="1"></iframe>
@@ -143,16 +143,16 @@
     <div id="earnings" class="tab-content">
       <h2 class="section-title">Earnings by Region</h2>
 
-      <!-- Chart 9 & 10 side by side -->
-      <div class="chart-row">
-        <div class="chart-block">
-          <iframe id="datawrapper-chart-9" title="Chart 9 Placeholder" src="" height="400"></iframe>
-          <div class="caption">Caption for chart 9</div>
-        </div>
-        <div class="chart-block">
-          <iframe id="datawrapper-chart-10" title="Chart 10 Placeholder" src="" height="400"></iframe>
-          <div class="caption">Caption for chart 10</div>
-        </div>
+      <!-- Chart 9 -->
+      <div class="chart-block">
+        <iframe id="datawrapper-chart-9" title="Chart 9 Placeholder" src="" height="400"></iframe>
+        <div class="caption">Caption for chart 9</div>
+      </div>
+
+      <!-- Chart 10 -->
+      <div class="chart-block">
+        <iframe id="datawrapper-chart-10" title="Chart 10 Placeholder" src="" height="400"></iframe>
+        <div class="caption">Caption for chart 10</div>
       </div>
     </div>
   </main>
@@ -174,13 +174,9 @@
 
   <script>
     function openTab(tabId) {
-      // Hide all tab contents
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      // Remove active class from all tabs
       document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
-      // Show the selected tab
       document.getElementById(tabId).classList.add('active');
-      // Mark the clicked tab as active
       event.currentTarget.classList.add('active');
     }
   </script>
